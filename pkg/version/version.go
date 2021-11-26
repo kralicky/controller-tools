@@ -17,17 +17,11 @@ package version
 
 import (
 	"fmt"
-	"runtime/debug"
 )
 
 // Version returns the version of the main module
 func Version() string {
-	info, ok := debug.ReadBuildInfo()
-	if !ok {
-		// binary has not been built with module support
-		return "(unknown)"
-	}
-	return info.Main.Version
+	return "v0.7.0-patched"
 }
 
 // Print prints the main module version on stdout.
